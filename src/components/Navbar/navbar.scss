@@ -4,14 +4,15 @@
   background-color: white;
   color: $mainColor;
   width: 100%;
-  height: 70px;
+  height: 80px;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 3;
+  transition: all 1s ease;
 
   .wrapper{
-    padding: 10px 30px; //top-bottom = 10px   left-right = 30px
-    display: flex;  //setting to flex will make fill content horizontal
+    padding: 10px 30px; //top-bottom = 10px   left-right = 30px ...this makes 80px
+     display: flex;  //setting to flex will make fill content horizontal
     align-items: center; //items in display-flex align to center of each item
     justify-content: space-between; //items in display-flex(wrapper) spread out evenly
     

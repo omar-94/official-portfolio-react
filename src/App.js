@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
+import Menu from "./components/Menu/Menu";
 import Intro from "./components/Intro/Intro";
 import Portfolio from "./components/Portfolio/Portfolio";
 import WebProjects from "./components/WebProjects/WebProjects";
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="app">
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <div className="sections">
         <Intro />
         <Portfolio />
