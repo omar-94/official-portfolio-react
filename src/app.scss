@@ -5,12 +5,18 @@
     width: 100%;
     height: calc(100vh - 70px);
     background-color: lightsalmon;
-    position: relative;
+    position: relative;            //position is relative to normal(original) position and declared with top,bottom,right,left
     top: 70px;
+    scroll-behavior: smooth;       //scroll effects when clicking to navigate page
+    scroll-snap-type: y mandatory; //snap scroll bar to y-axis
+    &::-webkit-scrollbar{
+      display: none;               //hides scrollbar
+    }                   
 
     > *{
         width: 100vw;
         height: calc(100vh - 70px);
+        scroll-snap-align: start;  //signals sections to start scroll-snap-type
     }
   }
  
