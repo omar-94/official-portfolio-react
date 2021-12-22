@@ -5,10 +5,10 @@ import { webDevPorftolio, graphicDesignPortfolio, photographyPortfolio } from '.
 
 export default function Portfolio() {
 
-  const [selected, setSelected] = useState('web-development');    //useState to set current selection's id of submenu
+  const [selected, setSelected] = useState('web-development');    //useState to set current selection's id of submenu .. default to 'web-development'
   const [data, setData] = useState([])       //useState to hold current data selected to be displayed... set up as empty array as different OBJECTS will be passed
   
-  const list = [                //list of different portfolios
+  const listMenu = [                //list of different portfolios
     {                           //creates submenu in portfolio page  
       id: 'web-development',
       title: 'Web Development'
@@ -20,10 +20,6 @@ export default function Portfolio() {
     {
       id: 'photography',
       title: 'Photography'
-    },
-    {
-      id: 'extra',
-      title: 'Extra'
     }
   ]
 
@@ -52,12 +48,12 @@ export default function Portfolio() {
         <li>Web Development</li>
         <li>Graphic Design</li>
         <li>Photography</li> */}
-        {list.map((item) => (
+        {listMenu.map((item) => (
           <PortfolioList 
-          title={item.title} 
-          active={selected === item.id} 
-          setSelected={setSelected}
-          id={item.id}
+            title={item.title} 
+            active={selected === item.id} 
+            setSelected={setSelected}       //setSelected here comes from useState() where selected(above) is updated to equal item.id 
+            id={item.id}
           />
         ))}
       </ul>

@@ -16,6 +16,7 @@
 
   &.active{
     right: 0;
+    box-shadow: -3px 0px 15px -5px #000000;    //horizontal vertical blur spread color
     // transition: all 2s ease;   //this only makes transition to active class
   }
 
