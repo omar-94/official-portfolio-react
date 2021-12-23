@@ -5,6 +5,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  .arrow{
+    height: 45px;
+    position: absolute;   //when setting absolute position.. parent element must be set to relative
+    z-index: 1;
+    cursor: pointer;
+    
+    &.left{
+      left: 125px;
+      transform: rotate(90deg);
+    }
+
+    &.right{
+      right: 125px;
+      transform: rotate(-90deg);
+    }
+  }
 
   .slider{
     // background-color: grey;
@@ -82,12 +100,13 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          overflow: hidden;
           // background-color: lightseagreen;
           
           img{
             width: 90%;
-            transform: rotate(-10deg);
-            overflow: hidden;
+            transform-origin: 0 200px;
+            transform: translateY(175px) rotate(-10deg);
           }
         }
       }
